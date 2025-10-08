@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * @Filename - MyString.java
  * @Description - This will perform most of the string operations
@@ -29,16 +27,12 @@ public class MyString {
         return count;
     }
 
-    String replace(char toReplace,char replaceBy){
+    String replace(char toReplace, char replaceBy){
         char[] array = value.toCharArray();
         for(int i = 0; i < value.length(); i++){
-<<<<<<< HEAD
+
             if(array[i] == toReplace){
                 array[i] = replaceBy;
-=======
-            if(arr[i] == toReplace){
-                arr[i] = replaceBy;
->>>>>>> cf64824a3643326689ceaa2d7f89d467e04eae04
             }
         }
         this.value = new String(array);
@@ -88,13 +82,8 @@ public class MyString {
         char maxCharacter = value.charAt(0);
         for(int i = 0;i < value.length(); i++){
             char character = value.charAt(i);
-<<<<<<< HEAD
             array[character]++;
             if(array[character] > maxCount){
-=======
-            arr[character]++;
-            if(array[character] > max){
->>>>>>> cf64824a3643326689ceaa2d7f89d467e04eae04
                 maxCount =  array[character];
                 maxCharacter = character;
             }
@@ -124,13 +113,8 @@ public class MyString {
         if (value.length() == 0) return value;
 //            Left shift
         index = index % value.length();
-<<<<<<< HEAD
         String string1 = value.substring(index);
         String string2 = value.substring(0,index);
-=======
-        String string1 = value.substring(n);
-        String string2 = value.substring(0,n);
->>>>>>> cf64824a3643326689ceaa2d7f89d467e04eae04
         return this.value = string1 + string2;
     }
 

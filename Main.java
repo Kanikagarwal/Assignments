@@ -57,31 +57,21 @@ public class Main {
                     sc.nextLine();
                     System.out.println("Enter length");
                     int length = sc.nextInt();
-<<<<<<< HEAD
                     System.out.println(mystring.splice(start, length));
                     break;
                 case 6:
                     System.out.println("Result:-");
                     System.out.println(Arrays.toString(mystring.getSplit()));
-=======
-                    System.out.println(mystring.getSplice(start, length));
+
                     break;
-                case 6:
-                    System.out.println("Result:-");
-                    System.out.println(Arrays.toString(mystring.split()));
->>>>>>> cf64824a3643326689ceaa2d7f89d467e04eae04
-                    break;
+
                 case 7:
                     System.out.println("Result:-");
                     System.out.println(mystring.getMaxRepeat());
                     break;
                 case 8:
                     System.out.println("Result:-");
-<<<<<<< HEAD
                     System.out.println(mystring.sortString());
-=======
-                    System.out.println(mystring.sortSorting());
->>>>>>> cf64824a3643326689ceaa2d7f89d467e04eae04
                     break;
                 case 9:
                     System.out.println("Enter number of characters you want to shift");
