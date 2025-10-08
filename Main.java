@@ -57,7 +57,7 @@ public class Main {
                     sc.nextLine();
                     System.out.println("Enter length");
                     int length = sc.nextInt();
-                    System.out.println(mystring.splice(start, length));
+                    System.out.println(mystring.getSplice(start, length));
                     break;
                 case 6:
                     System.out.println("Result:-");
@@ -69,17 +69,17 @@ public class Main {
                     break;
                 case 8:
                     System.out.println("Result:-");
-                    System.out.println(mystring.sort());
+                    System.out.println(mystring.sortSorting());
                     break;
                 case 9:
                     System.out.println("Enter number of characters you want to shift");
-                    int m = sc.nextInt();
+                    int index = sc.nextInt();
                     System.out.println("Result:-");
-                    System.out.println(mystring.shift(m));
+                    System.out.println(mystring.getShift(index));
                     break;
                 case 10:
                     System.out.println("Result:-");
-                    System.out.println(mystring.reverse());
+                    System.out.println(mystring.getReverse());
                     break;
             }
         }
