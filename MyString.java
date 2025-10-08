@@ -51,7 +51,7 @@ public class MyString {
         return true;
     }
 
-    String[] split(){
+    String[] getSplit(){
         int n = countWords();
         String[] array = new String[n];
         int i = 0;
@@ -78,28 +78,39 @@ public class MyString {
 
     char getMaxRepeat(){
         if(value.length() == 0) return '\0';
-        int arr[] = new int[256];
-        int max=0;
-        char character = value.charAt(0);
+        int array[] = new int[256];
+        int maxCount = 0;
+        char maxCharacter = value.charAt(0);
         for(int i = 0;i < value.length(); i++){
-            char c = value.charAt(i);
-            arr[c]++;
-            if(arr[c] > max){
-                max=  arr[c];
-                character = c;
+            char character = value.charAt(i);
+            arr[character]++;
+            if(array[character] > max){
+                maxCount =  array[character];
+                maxCharacter = character;
             }
         }
-        return character;
+        return maxCharacter;
     }
 
-    String sort(){
-        char a[] = value.toCharArray();
-        Arrays.sort(a);
-        return this.value = new String(a);
+    String sortString() {
+        char array[] = value.toCharArray();
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    char temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+
+        this.value = new String(array);
+        return this.value;
     }
 
     //        9.Shift
-    String shift(int index){
+    String getShift(int index){
         if (value.length() == 0) return value;
 //            Left shift
         index = index % value.length();
@@ -108,7 +119,7 @@ public class MyString {
         return this.value = string1 + string2;
     }
 
-    public String reverse(){
+    public String getReverse(){
         String value = this.value;
         this.value = "";
         for (int i = value.length() - 1; i >= 0; i--){
