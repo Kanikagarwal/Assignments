@@ -1,6 +1,12 @@
+/**
+ * @filename - MyString.java
+ * @description - This will perform most of the string operations
+ * @author - Kanika Agarwal
+ */
+
 import java.util.*;
 
-public class String_operation {
+public class String_operation { // MyString
     static class StringOp{
         String s;
 
@@ -125,13 +131,6 @@ public class String_operation {
             arr[j]=a;
         }
     }
-
-
-
-
-
-
-
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
